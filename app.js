@@ -12,5 +12,7 @@ function config($routeProvider){
         templateUrl: 'templates/about.html',
         controller: 'AboutController',
         controllerAs: 'vm'
+    }).otherwise({
+        redirectTo: '/'
     });
 }
