@@ -5,11 +5,11 @@ angular.module('myApp', ['ngRoute']).config(config);
 
 function config($routeProvider){ //$routeProvider is an AngularJS service
     $routeProvider.when('/', {
-        templateUrl: 'templates/main.html',
+        templateUrl: 'main/main.html',
         controller: 'MainController',
         controllerAs: 'vm'
     }).when('/film/:id', {
-        templateUrl: 'templates/film.html',
+        templateUrl: 'film/film.html',
         controller: 'FilmController',
         controllerAs: 'vm'
     }).when('/404', {
