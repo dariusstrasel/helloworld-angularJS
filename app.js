@@ -3,14 +3,14 @@
  */
 angular.module('myApp', ['ngRoute']).config(config);
 
-function config($routeProvider){
+function config($routeProvider){ //$routeProvider is an AngularJS service
     $routeProvider.when('/', {
         templateUrl: 'templates/main.html',
-        controller: 'MyController',
+        controller: 'MainController',
         controllerAs: 'vm'
-    }).when('/about', {
-        templateUrl: 'templates/about.html',
-        controller: 'AboutController',
+    }).when('/film/:id', {
+        templateUrl: 'templates/film.html',
+        controller: 'FilmController',
         controllerAs: 'vm'
     }).when('/404', {
         template: '<p>Error 404: Could not find URL.</p>'
