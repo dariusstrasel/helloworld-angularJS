@@ -12,7 +12,9 @@ function config($routeProvider){
         templateUrl: 'templates/about.html',
         controller: 'AboutController',
         controllerAs: 'vm'
+    }).when('/404', {
+        template: '<p>Error 404: Could not find URL.</p>'
     }).otherwise({
-        redirectTo: '/'
+        redirectTo: '/404'
     });
 }
